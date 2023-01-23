@@ -46,7 +46,7 @@ exports.disease = async(req,res)=>{
 exports.addData = async(req,res)=>{
 
 
-    let body = req.body;
+    let body = req.params;
     let name = body.name;
     let city = body.city;
     let disease = body.disease;

@@ -1,11 +1,12 @@
 let router = require('express');
 let app = router();
+let cors = require('cors');
 let rout = require('./router');
 let mongoose = require('mongoose');
 
 app.use(router.json());
 app.use(router.urlencoded({ extended: true }));
-
+app.use(cors({origin: "http://localhost:3000", optionsSuccessStatus: 200}))
 
 app.use('/initial',rout);
 
